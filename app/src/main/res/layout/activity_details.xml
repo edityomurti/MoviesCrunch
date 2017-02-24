@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.example.edityomurti.moviescrunch.activity.DetailsActivity">
+
+    <ImageView
+        android:id="@+id/iv_backdrop"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/iv_backdrop"
+        android:layout_marginTop="-120dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_poster"
+                    android:layout_width="90dp"
+                    android:layout_height="110dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="centerCrop"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp">
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MOVIES TITLE"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:lines="2"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tv_voted_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:text="Voted : "
+                            android:textSize="12sp"
+                            android:lines="1"/>
+                        <TextView
+                            android:id="@+id/tv_rating_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/tv_voted_layout"
+                            android:text="Rating : "
+                            android:textSize="12sp"
+                            android:lines="1"/>
+                        <TextView
+                            android:id="@+id/tv_date_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/tv_rating_layout"
+                            android:text="Release date : "
+                            android:textSize="12sp"
+                            android:lines="1"/>
+                        <TextView
+                            android:id="@+id/tv_voted"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_voted_layout"
+                            android:layout_toRightOf="@id/tv_voted_layout"
+                            android:text="299"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:lines="1"/>
+                        <TextView
+                            android:id="@+id/tv_rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_rating_layout"
+                            android:layout_toRightOf="@id/tv_rating_layout"
+                            android:text="5.1"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:lines="1"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_rating"
+                            android:layout_toRightOf="@id/tv_rating"
+                            android:text=" / 10"
+                            android:textSize="12sp"
+                            android:lines="1"/>
+                        <TextView
+                            android:id="@+id/tv_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_date_layout"
+                            android:layout_toRightOf="@id/tv_date_layout"
+                            android:text="12 Feb 2017"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:lines="1"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Synopsis"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tv_overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Julia becomes worried about her boyfriend, Holt when he explores the dark urban legend of a mysterious videotape said to kill the watcher seven days after viewing. She sacrifices herself to save her boyfriend and in doing so makes a horrifying discovery: there is a movie within the movie that no One has ever seen before."/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
